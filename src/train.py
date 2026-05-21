@@ -26,8 +26,9 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
 #Create outputs folder if it doesn't exist
-import pathlib
-pathlib.Path("outputs").mkdir(exist_ok=True,parents=True)
+import os
+os.makedirs("outputs", exist_ok=True)
+
 #Save the matrix to an image file
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay
